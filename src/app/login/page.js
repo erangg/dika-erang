@@ -16,8 +16,8 @@ export default function LoginPage() {
     const user = mockUsers.find(u => u.email === email && u.password === password)
 
     if (user) {
-      sessionStorage.setItem('user', JSON.stringify(user))
-      router.push('user')
+      sessionStorage.setItem('dashboard', JSON.stringify(user))
+      router.push('dashboard')
     } else {
       setError('Email atau password salah')
     }
@@ -39,14 +39,15 @@ export default function LoginPage() {
           {/* Input Email */}
           <div className="mb-3 relative">
             <input
-              type="text"
-              placeholder="Nama Pengguna / Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-              required
-            />
-            <span className="absolute right-3 top-2.5 text-gray-500">
+            type="text"
+            placeholder="Nama Pengguna / Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-4 py-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 placeholder-gray-600"
+            required
+          />
+
+            <span className="absolute right-3 top-2.5 text-black">
               <i className="fa fa-user" />
             </span>
           </div>
@@ -54,14 +55,14 @@ export default function LoginPage() {
           {/* Input Password */}
           <div className="mb-3 relative">
             <input
-              type={showPassword ? 'text' : 'password'}
-              placeholder="Kata Sandi"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-              required
-            />
-            <span className="absolute right-3 top-2.5 text-gray-500">
+            type={showPassword ? 'text' : 'password'}
+            placeholder="Kata Sandi"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-4 py-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 placeholder-gray-600"
+            required
+          />
+            <span className="absolute right-3 top-2.5 text-black">
               <i className="fa fa-lock" />
             </span>
           </div>
