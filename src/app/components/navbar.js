@@ -12,10 +12,15 @@ export default function Navbar() {
 
         {/* Menu kanan */}
         <ul className="flex space-x-6 text-sm font-medium text-green-900">
-          <li><Link href="/dashboard">Beranda</Link></li>
-          <li><Link href="/produk">Produk</Link></li>
-          <li><Link href="/artikel">Artikel / Berita</Link></li>
-          <li><Link href="/login" className="text-red-600 hover:underline">Logout</Link></li>
+          <li><Link href="/dashboard" className='hover:underline'>Beranda</Link></li>
+          <li><Link href="/produk" className='hover:underline'>Produk</Link></li>
+          <li><Link href="/artikel" className='hover:underline'>Artikel / Berita</Link></li>
+<li>
+  <Link href="/login" className="flex items-center gap-2 text-red-600 hover:underline">
+    <img src="logout.png" alt="Logout" className="w-5 h-5" />
+    Logout
+  </Link>
+</li>
         </ul>
       </div>
     </nav>

@@ -22,9 +22,10 @@ export default function Footer() {
 
       {/* Navigation Links */}
       <div className="flex justify-center space-x-8 text-sm mb-4">
-        <a href="#" className="hover:underline">Tentang</a>
-        <a href="http://linktr.ee/pangeranmap" className="hover:underline">Kontak</a>
+        <a href="/tentang" className="hover:underline">Tentang</a>
+        <a href="http://linktr.ee/pangeranmap" className="hover:underline">Media Sosial</a>
         <a href="/ourteam" className="hover:underline">Tim Kami</a>
+        <a href="/users" className="hover:underline">Hubungi Kami</a>
       </div>
 
       {/* Copyright */}
